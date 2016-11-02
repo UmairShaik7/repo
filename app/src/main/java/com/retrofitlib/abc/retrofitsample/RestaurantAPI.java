@@ -18,7 +18,6 @@ import retrofit2.http.Query;
 public interface RestaurantAPI {
 
     @Headers("user-key: 9b48f6666c779c167a90bfbb864ad66f")
-
     @GET("/api/v2.1/geocode")
     Call<List<Restaurant>> getTask(@Query("lat") double lat,
                                    @Query("lon") double lon);
