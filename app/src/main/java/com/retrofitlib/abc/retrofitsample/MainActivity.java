@@ -1,23 +1,17 @@
 package com.retrofitlib.abc.retrofitsample;
 
-import android.app.ProgressDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ListView;
 
 import com.retrofitlib.abc.retrofitsample.pojo.Restaurant;
 
-import java.io.IOException;
 import java.util.List;
 
-import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-
-import static android.R.attr.apiKey;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getRestaurants() {
-        final ProgressDialog loading = ProgressDialog.show(this, "Fetching Data", "Please wait...", false, false);
+        //final ProgressDialog loading = ProgressDialog.show(this, "Fetching Data", "Please wait...", false, false);
 
         // Create a very simple REST adapter which points the GitHub API endpoint.
         RestaurantAPI client = ServiceGenerator.createService(RestaurantAPI.class);
